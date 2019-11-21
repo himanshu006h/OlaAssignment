@@ -14,6 +14,16 @@
 		C47DC63C2386BEC2005697B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47DC63B2386BEC2005697B6 /* Assets.xcassets */; };
 		C47DC63F2386BEC2005697B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47DC63D2386BEC2005697B6 /* LaunchScreen.storyboard */; };
 		C47DC64A2386BEC2005697B6 /* OlaAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6492386BEC2005697B6 /* OlaAssignmentTests.swift */; };
+		C47DC65A2386BF29005697B6 /* MapDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6572386BF29005697B6 /* MapDetailsModel.swift */; };
+		C47DC65B2386BF29005697B6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6582386BF29005697B6 /* Location.swift */; };
+		C47DC65C2386BF29005697B6 /* VehicleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6592386BF29005697B6 /* VehicleDetails.swift */; };
+		C47DC65E2386BF57005697B6 /* MapDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC65D2386BF57005697B6 /* MapDetailsViewModel.swift */; };
+		C47DC6642386BFB2005697B6 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6602386BFB2005697B6 /* APIErrors.swift */; };
+		C47DC6652386BFB2005697B6 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6612386BFB2005697B6 /* NetworkDataLoader.swift */; };
+		C47DC6662386BFB2005697B6 /* String+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6622386BFB2005697B6 /* String+URLRequest.swift */; };
+		C47DC66A2386C752005697B6 /* CabInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6682386C752005697B6 /* CabInfoCell.swift */; };
+		C47DC66B2386C752005697B6 /* CabInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47DC6692386C752005697B6 /* CabInfoCell.xib */; };
+		C47DC66D2386C8D9005697B6 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,16 @@
 		C47DC6452386BEC2005697B6 /* OlaAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OlaAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47DC6492386BEC2005697B6 /* OlaAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaAssignmentTests.swift; sourceTree = "<group>"; };
 		C47DC64B2386BEC2005697B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C47DC6572386BF29005697B6 /* MapDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailsModel.swift; sourceTree = "<group>"; };
+		C47DC6582386BF29005697B6 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C47DC6592386BF29005697B6 /* VehicleDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetails.swift; sourceTree = "<group>"; };
+		C47DC65D2386BF57005697B6 /* MapDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailsViewModel.swift; sourceTree = "<group>"; };
+		C47DC6602386BFB2005697B6 /* APIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		C47DC6612386BFB2005697B6 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
+		C47DC6622386BFB2005697B6 /* String+URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLRequest.swift"; sourceTree = "<group>"; };
+		C47DC6682386C752005697B6 /* CabInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabInfoCell.swift; sourceTree = "<group>"; };
+		C47DC6692386C752005697B6 /* CabInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CabInfoCell.xib; sourceTree = "<group>"; };
+		C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +99,11 @@
 		C47DC6302386BEC0005697B6 /* OlaAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				C47DC65F2386BFB1005697B6 /* Utility */,
+				C47DC6542386BEF9005697B6 /* Model */,
+				C47DC6552386BEF9005697B6 /* View */,
+				C47DC6562386BEF9005697B6 /* ViewModel */,
 				C47DC6312386BEC0005697B6 /* AppDelegate.swift */,
-				C47DC6332386BEC0005697B6 /* ViewController.swift */,
-				C47DC6352386BEC0005697B6 /* Main.storyboard */,
 				C47DC63B2386BEC2005697B6 /* Assets.xcassets */,
 				C47DC63D2386BEC2005697B6 /* LaunchScreen.storyboard */,
 				C47DC6402386BEC2005697B6 /* Info.plist */,
@@ -97,6 +119,46 @@
 				C47DC64B2386BEC2005697B6 /* Info.plist */,
 			);
 			path = OlaAssignmentTests;
+			sourceTree = "<group>";
+		};
+		C47DC6542386BEF9005697B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C47DC6582386BF29005697B6 /* Location.swift */,
+				C47DC6572386BF29005697B6 /* MapDetailsModel.swift */,
+				C47DC6592386BF29005697B6 /* VehicleDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C47DC6552386BEF9005697B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C47DC6332386BEC0005697B6 /* ViewController.swift */,
+				C47DC6352386BEC0005697B6 /* Main.storyboard */,
+				C47DC6682386C752005697B6 /* CabInfoCell.swift */,
+				C47DC6692386C752005697B6 /* CabInfoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C47DC6562386BEF9005697B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C47DC65D2386BF57005697B6 /* MapDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C47DC65F2386BFB1005697B6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C47DC6602386BFB2005697B6 /* APIErrors.swift */,
+				C47DC6612386BFB2005697B6 /* NetworkDataLoader.swift */,
+				C47DC6622386BFB2005697B6 /* String+URLRequest.swift */,
+				C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +244,7 @@
 			files = (
 				C47DC63F2386BEC2005697B6 /* LaunchScreen.storyboard in Resources */,
 				C47DC63C2386BEC2005697B6 /* Assets.xcassets in Resources */,
+				C47DC66B2386C752005697B6 /* CabInfoCell.xib in Resources */,
 				C47DC6372386BEC0005697B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,8 +264,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47DC6342386BEC0005697B6 /* ViewController.swift in Sources */,
+				C47DC6642386BFB2005697B6 /* APIErrors.swift in Sources */,
+				C47DC65A2386BF29005697B6 /* MapDetailsModel.swift in Sources */,
+				C47DC66A2386C752005697B6 /* CabInfoCell.swift in Sources */,
+				C47DC65B2386BF29005697B6 /* Location.swift in Sources */,
+				C47DC6662386BFB2005697B6 /* String+URLRequest.swift in Sources */,
+				C47DC65C2386BF29005697B6 /* VehicleDetails.swift in Sources */,
+				C47DC6652386BFB2005697B6 /* NetworkDataLoader.swift in Sources */,
 				C47DC63A2386BEC0005697B6 /* OlaAssignment.xcdatamodeld in Sources */,
 				C47DC6322386BEC0005697B6 /* AppDelegate.swift in Sources */,
+				C47DC65E2386BF57005697B6 /* MapDetailsViewModel.swift in Sources */,
+				C47DC66D2386C8D9005697B6 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
