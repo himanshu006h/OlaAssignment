@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerNewsCell()
+        self.registerCollectionCell()
         self.loadDetails()
     }
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         self.carInfoList.reloadData()
     }
     //MARK:- Register cell
-    func registerNewsCell() {
+    func registerCollectionCell() {
         self.carInfoList.register(UINib(nibName: Constants.cellIdentifier, bundle: nil), forCellWithReuseIdentifier: Constants.cellIdentifier)
     }
     
