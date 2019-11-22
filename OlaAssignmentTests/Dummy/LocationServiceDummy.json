@@ -1,0 +1,333 @@
+
+[
+{
+"id": "WMWOLAID00001",
+"modelIdentifier": "mini",
+"modelName": "MINI",
+"group": "MINI",
+"licensePlate": "KA01AZ4711",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/UqzFXjd.png",
+"vehicleDetails": {
+"name": "Vanessa",
+"make": "BMW",
+"color": "midnight_black",
+"series": "REGULAR",
+"fuel_type": "D",
+"fuel_level": 0.4,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.950415,
+"longitude": 77.642605
+}
+},
+{
+"id": "WMWOLAID00002",
+"modelIdentifier": "mini",
+"modelName": "MINI",
+"group": "MINI",
+"licensePlate": "KA01AZ4712",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/I5MfyrH.png",
+"vehicleDetails": {
+"name": "Regine",
+"make": "BMW",
+"color": "midnight_blue",
+"series": "REGULAR",
+"fuel_type": "P",
+"fuel_level": 0.55,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.9486298,
+"longitude": 77.6429308
+}
+},
+{
+"id": "WMWOLAID00003",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4713",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "Angie",
+"make": "BMW",
+"color": "midnight_black",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.7,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.950515,
+"longitude": 77.642805
+}
+},
+{
+"id": "WMWOLAID00004",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "LUX",
+"licensePlate": "KA01AZ4714",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/ENwb3gi.png",
+"vehicleDetails": {
+"name": "Valentin",
+"make": "BMW",
+"color": "midnight_blue",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.47,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.950818,
+"longitude": 77.642822
+}
+},
+{
+"id": "WMWOLAID00005",
+"modelIdentifier": "LUX",
+"modelName": "LUX",
+"group": "LUX",
+"licensePlate": "KA01AZ4715",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/IunoS4u.png",
+"vehicleDetails": {
+"name": "X5",
+"make": "BMW",
+"color": "midnight_black",
+"series": "REGULAR",
+"fuel_type": "D",
+"fuel_level": 0.74,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.9513924,
+"longitude": 77.6403103
+}
+},
+{
+"id": "WMWOLAID00006",
+"modelIdentifier": "mini",
+"modelName": "MINI",
+"group": "MINI",
+"licensePlate": "KA01AZ4761",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/UqzFXjd.png",
+"vehicleDetails": {
+"name": "Vanessa",
+"make": "BMW",
+"color": "midnight_black",
+"series": "REGULAR",
+"fuel_type": "D",
+"fuel_level": 0.4,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.951415,
+"longitude": 77.645605
+}
+},
+{
+"id": "WMWOLAID00007",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4772",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "X1",
+"make": "BMW",
+"color": "midnight_blue",
+"series": "REGULAR",
+"fuel_type": "P",
+"fuel_level": 0.55,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.9489298,
+"longitude": 77.6421308
+}
+},
+{
+"id": "WMWOLAID00008",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4783",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "Angie",
+"make": "BMW",
+"color": "midnight_black",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.7,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.954515,
+"longitude": 77.648805
+}
+},
+{
+"id": "WMWOLAID00009",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "LUX",
+"licensePlate": "KA01AZ4794",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/ENwb3gi.png",
+"vehicleDetails": {
+"name": "Valentin",
+"make": "BMW",
+"color": "midnight_blue",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.47,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.956818,
+"longitude": 77.646822
+}
+},
+{
+"id": "WMWOLAID00010",
+"modelIdentifier": "lux",
+"modelName": "LUX",
+"group": ":LUX",
+"licensePlate": "KA01AZ4705",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/IunoS4u.png",
+"vehicleDetails": {
+"name": "X5",
+"make": "BMW",
+"color": "midnight_black",
+"series": "REGULAR",
+"fuel_type": "D",
+"fuel_level": 0.74,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.952439,
+"longitude": 77.6400321
+}
+},
+{
+"id": "WMWOLAID00011",
+"modelIdentifier": "mini",
+"modelName": "MINI",
+"group": "MINI",
+"licensePlate": "KA01AZ4712",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/I5MfyrH.png",
+"vehicleDetails": {
+"name": "Regine",
+"make": "BMW",
+"color": "midnight_blue",
+"series": "REGULAR",
+"fuel_type": "P",
+"fuel_level": 0.55,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.9481298,
+"longitude": 77.6421308
+}
+},
+{
+"id": "WMWOLAID000012",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4713",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "Angie",
+"make": "BMW",
+"color": "midnight_black",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.7,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.956515,
+"longitude": 77.646805
+}
+},
+{
+"id": "WMWOLAID000013",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4712",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "Angie",
+"make": "BMW",
+"color": "midnight_black",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.7,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.951515,
+"longitude": 77.649805
+}
+},
+{
+"id": "WMWOLAID00014",
+"modelIdentifier": "mini",
+"modelName": "MINI",
+"group": "MINI",
+"licensePlate": "KA01AZ4724",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/UqzFXjd.png",
+"vehicleDetails": {
+"name": "Vanessa",
+"make": "BMW",
+"color": "midnight_black",
+"series": "REGULAR",
+"fuel_type": "D",
+"fuel_level": 0.4,
+"transmission": "A"
+},
+"location": {
+"latitude": 12.950315,
+"longitude": 77.642105
+}
+},
+{
+"id": "WMWOLAID000015",
+"modelIdentifier": "prime",
+"modelName": "PRIME",
+"group": "PRIME",
+"licensePlate": "KA01AZ4715",
+"innerCleanliness": "REGULAR",
+"carImageUrl": "https://i.imgur.com/HK4iXJP.png",
+"vehicleDetails": {
+"name": "Angie",
+"make": "BMW",
+"color": "midnight_black",
+"series": "LUX",
+"fuel_type": "D",
+"fuel_level": 0.7,
+"transmission": "M"
+},
+"location": {
+"latitude": 12.956676,
+"longitude": 77.644444
+}
+}
+]

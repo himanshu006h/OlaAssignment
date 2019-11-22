@@ -21,9 +21,13 @@
 		C47DC6642386BFB2005697B6 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6602386BFB2005697B6 /* APIErrors.swift */; };
 		C47DC6652386BFB2005697B6 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6612386BFB2005697B6 /* NetworkDataLoader.swift */; };
 		C47DC6662386BFB2005697B6 /* String+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6622386BFB2005697B6 /* String+URLRequest.swift */; };
-		C47DC66A2386C752005697B6 /* CabInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC6682386C752005697B6 /* CabInfoCell.swift */; };
-		C47DC66B2386C752005697B6 /* CabInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47DC6692386C752005697B6 /* CabInfoCell.xib */; };
 		C47DC66D2386C8D9005697B6 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */; };
+		C47DC6702386CEA6005697B6 /* cabInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47DC66E2386CEA6005697B6 /* cabInfoCollectionViewCell.swift */; };
+		C47DC6712386CEA6005697B6 /* cabInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47DC66F2386CEA6005697B6 /* cabInfoCollectionViewCell.xib */; };
+		C4B5A1572387C254009244B9 /* MapLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B5A1562387C254009244B9 /* MapLocator.swift */; };
+		C4B5A1592387C60B009244B9 /* MapDetailsAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B5A1582387C60B009244B9 /* MapDetailsAnnotation.swift */; };
+		C4B5A15B2387EBFE009244B9 /* OlaAssignmentParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B5A15A2387EBFE009244B9 /* OlaAssignmentParsingTest.swift */; };
+		C4B5A15E2387EC6A009244B9 /* LocationServiceDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C4B5A15D2387EC6A009244B9 /* LocationServiceDummy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +59,13 @@
 		C47DC6602386BFB2005697B6 /* APIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		C47DC6612386BFB2005697B6 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		C47DC6622386BFB2005697B6 /* String+URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLRequest.swift"; sourceTree = "<group>"; };
-		C47DC6682386C752005697B6 /* CabInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabInfoCell.swift; sourceTree = "<group>"; };
-		C47DC6692386C752005697B6 /* CabInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CabInfoCell.xib; sourceTree = "<group>"; };
 		C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		C47DC66E2386CEA6005697B6 /* cabInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		C47DC66F2386CEA6005697B6 /* cabInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cabInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		C4B5A1562387C254009244B9 /* MapLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocator.swift; sourceTree = "<group>"; };
+		C4B5A1582387C60B009244B9 /* MapDetailsAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsAnnotation.swift; sourceTree = "<group>"; };
+		C4B5A15A2387EBFE009244B9 /* OlaAssignmentParsingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlaAssignmentParsingTest.swift; sourceTree = "<group>"; };
+		C4B5A15D2387EC6A009244B9 /* LocationServiceDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocationServiceDummy.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +123,10 @@
 		C47DC6482386BEC2005697B6 /* OlaAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4B5A15C2387EC47009244B9 /* Dummy */,
 				C47DC6492386BEC2005697B6 /* OlaAssignmentTests.swift */,
 				C47DC64B2386BEC2005697B6 /* Info.plist */,
+				C4B5A15A2387EBFE009244B9 /* OlaAssignmentParsingTest.swift */,
 			);
 			path = OlaAssignmentTests;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 				C47DC6582386BF29005697B6 /* Location.swift */,
 				C47DC6572386BF29005697B6 /* MapDetailsModel.swift */,
 				C47DC6592386BF29005697B6 /* VehicleDetails.swift */,
+				C4B5A1582387C60B009244B9 /* MapDetailsAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,8 +147,9 @@
 			children = (
 				C47DC6332386BEC0005697B6 /* ViewController.swift */,
 				C47DC6352386BEC0005697B6 /* Main.storyboard */,
-				C47DC6682386C752005697B6 /* CabInfoCell.swift */,
-				C47DC6692386C752005697B6 /* CabInfoCell.xib */,
+				C47DC66E2386CEA6005697B6 /* cabInfoCollectionViewCell.swift */,
+				C47DC66F2386CEA6005697B6 /* cabInfoCollectionViewCell.xib */,
+				C4B5A1562387C254009244B9 /* MapLocator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +171,14 @@
 				C47DC66C2386C8D9005697B6 /* AsyncImageView.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		C4B5A15C2387EC47009244B9 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				C4B5A15D2387EC6A009244B9 /* LocationServiceDummy.json */,
+			);
+			path = Dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47DC63F2386BEC2005697B6 /* LaunchScreen.storyboard in Resources */,
+				C47DC6712386CEA6005697B6 /* cabInfoCollectionViewCell.xib in Resources */,
 				C47DC63C2386BEC2005697B6 /* Assets.xcassets in Resources */,
-				C47DC66B2386C752005697B6 /* CabInfoCell.xib in Resources */,
 				C47DC6372386BEC0005697B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B5A15E2387EC6A009244B9 /* LocationServiceDummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B5A1592387C60B009244B9 /* MapDetailsAnnotation.swift in Sources */,
 				C47DC6342386BEC0005697B6 /* ViewController.swift in Sources */,
 				C47DC6642386BFB2005697B6 /* APIErrors.swift in Sources */,
 				C47DC65A2386BF29005697B6 /* MapDetailsModel.swift in Sources */,
-				C47DC66A2386C752005697B6 /* CabInfoCell.swift in Sources */,
 				C47DC65B2386BF29005697B6 /* Location.swift in Sources */,
+				C47DC6702386CEA6005697B6 /* cabInfoCollectionViewCell.swift in Sources */,
 				C47DC6662386BFB2005697B6 /* String+URLRequest.swift in Sources */,
+				C4B5A1572387C254009244B9 /* MapLocator.swift in Sources */,
 				C47DC65C2386BF29005697B6 /* VehicleDetails.swift in Sources */,
 				C47DC6652386BFB2005697B6 /* NetworkDataLoader.swift in Sources */,
 				C47DC63A2386BEC0005697B6 /* OlaAssignment.xcdatamodeld in Sources */,
@@ -282,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B5A15B2387EBFE009244B9 /* OlaAssignmentParsingTest.swift in Sources */,
 				C47DC64A2386BEC2005697B6 /* OlaAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

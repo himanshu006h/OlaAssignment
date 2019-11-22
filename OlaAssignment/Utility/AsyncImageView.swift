@@ -6,13 +6,13 @@
 //  Copyright © 2019 Himanshu Saraswat. All rights reserved.
 //
 
-typealias ImageCompletionHandler = (_ urlString: String) -> Void
+typealias ImageCompletionHandler = (_ imageData: Data) -> Void
 
 import Foundation
 import UIKit
 
 class AsyncImageView: UIImageView {
-    var imageCache = NSCache<NSString , UIImage>()
+   public var imageCache = NSCache<NSString , UIImage>()
     var imageUrlString : String?
     
     override init(frame: CGRect) {
@@ -43,7 +43,7 @@ class AsyncImageView: UIImageView {
     // if the image is present inside the local cache then no need to fetch from the internet
     // if the call could not be completed then insert a default image for broken link
     // If the app extends in functionality, this method can be moved to a separate extension to make it accessible through out the app
-    func loadImage(urlString: String, urlMainString: String = "", completion: @escaping ImageCompletionHandler){
+    func loadImage(urlString: String, completion: @escaping ImageCompletionHandler){
         
         imageUrlString = urlString
         guard let url = URL(string: urlString) else {
@@ -51,16 +51,11 @@ class AsyncImageView: UIImageView {
         }
         
         if let imageFromCache = imageCache.object(forKey: urlString as NSString) {
-            if let mainImageFromCache = imageCache.object(forKey: urlMainString as NSString) {
-                DispatchQueue.main.async {
-                    self.image = mainImageFromCache
-                }
-            } else {
                 DispatchQueue.main.async {
                     self.image = imageFromCache
-                }
+                    self.clipsToBounds = true
             }
-            self.clipsToBounds = true
+            
             return
         }
         
@@ -75,14 +70,14 @@ class AsyncImageView: UIImageView {
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 DispatchQueue.main.async {
-                    if let imageToBeStoredInCache = UIImage(data: data){
+                    if let imageToBeStoredInCache = UIImage(data: data) {
                         if self.imageUrlString == urlString {
                             self.image = imageToBeStoredInCache
                             self.clipsToBounds = true
                         }
                         self.imageCache.setObject(imageToBeStoredInCache, forKey: urlString as NSString)
                         if self.imageUrlString == urlString {
-                            completion(urlString)
+                            completion(data)
                         }
                     }
                 }

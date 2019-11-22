@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
     
@@ -14,14 +15,18 @@ class ViewController: UIViewController {
     struct Constants {
         static let cancel = "Cancel"
         static let blank = ""
-        static let cellIdentifier = "CabInfoCell"
+        static let cellIdentifier = "cabInfoCollectionViewCell"
+        static let annotationImageHeight = 20.0
+        static let annotationImagewidth = 20.0
     }
     
     //MARK:- Properties
-    
-    @IBOutlet weak var carInfoList: UITableView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var carInfoList: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var mapInformation: [MapDetailsModel]?
+    let regionRadius: CLLocationDistance = 1000
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerNewsCell()
@@ -47,9 +52,32 @@ class ViewController: UIViewController {
     }
     //MARK:- Register cell
     func registerNewsCell() {
-        self.carInfoList.register(UINib(nibName: Constants.cellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        self.carInfoList.register(UINib(nibName: Constants.cellIdentifier, bundle: nil), forCellWithReuseIdentifier: Constants.cellIdentifier)
     }
     
+    //MARK:- Locate on Map
+    func setLocationsOnMap() {
+        // Show position on maps
+        guard let details = self.mapInformation else {
+            return
+        }
+        let initialLocation = CLLocation(latitude: details.first?.location?.latitude ?? 0.0, longitude: details.first?.location?.longitude ?? 0.0)
+        self.centerMapOnLocation(location: initialLocation)
+        
+        // add all locations on map
+        for carDetail in details {
+            if let carName = carDetail.vehicleDetails?.name,
+                let carType = carDetail.vehicleDetails?.make,
+                let imageUrl = carDetail.carImageUrl,
+                let carLocation = carDetail.location  {
+                let artwork = MapDetailsAnnotation(title: carName,
+                                                   carType: carType,
+                                                   imageName: imageUrl,
+                                                   coordinate: CLLocationCoordinate2D(latitude: carLocation.latitude ?? 0.0, longitude: carLocation.longitude ?? 0.0))
+                mapView.addAnnotation(artwork)
+            }
+        }
+    }
 }
 
 extension ViewController: MapInformationProtocol {
@@ -63,6 +91,7 @@ extension ViewController: MapInformationProtocol {
             self.mapInformation = response
             DispatchQueue.main.async{
                 self.updateTableView()
+                self.setLocationsOnMap()
             }
         } else if let erorrDiscription = error {
             DispatchQueue.main.async {
@@ -75,29 +104,19 @@ extension ViewController: MapInformationProtocol {
     }
 }
 
-//MARK: Table Datasource
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//MARK: CollectionView Datasource
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.mapInformation?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as? CabInfoCell,
-            let details = self.mapInformation else {
-                return UITableViewCell()
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath as IndexPath) as? cabInfoCollectionViewCell,
+            let details = self.mapInformation else {
+                return UICollectionViewCell()
+        }
         cell.configureCell(details: details[indexPath.row])
         return cell
-    }
-}
-
-//MARK: Table Delegate
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let news = mapInformation else {
-            return
-        }
-        
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cabInfoCollectionViewCell" id="gTV-IL-0wX" customClass="cabInfoCollectionViewCell" customModule="OlaAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="79" height="91"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="79" height="91"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkn-FN-CC3">
+                        <rect key="frame" x="0.0" y="0.0" width="79" height="91"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarImage" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-XF-WFl" customClass="AsyncImageView" customModule="OlaAssignment" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="62" height="53"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-cq-rQR">
+                                <rect key="frame" x="21.5" y="69" width="35.5" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="tek-nH-xPt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QIB-cq-rQR" firstAttribute="centerX" secondItem="j0x-XF-WFl" secondAttribute="centerX" id="0L9-GP-dXO"/>
+                            <constraint firstItem="QIB-cq-rQR" firstAttribute="top" secondItem="j0x-XF-WFl" secondAttribute="bottom" constant="8" id="2p8-Uq-ZcI"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QIB-cq-rQR" secondAttribute="trailing" id="Rep-67-fww"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QIB-cq-rQR" secondAttribute="bottom" id="U96-FI-8Bj"/>
+                            <constraint firstItem="j0x-XF-WFl" firstAttribute="leading" secondItem="Rkn-FN-CC3" secondAttribute="leading" constant="8" id="cAO-Rm-DOb"/>
+                            <constraint firstItem="j0x-XF-WFl" firstAttribute="top" secondItem="Rkn-FN-CC3" secondAttribute="top" constant="8" id="xDq-wg-hgI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Rkn-FN-CC3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lAA-2Q-Zpn"/>
+                <constraint firstAttribute="bottom" secondItem="Rkn-FN-CC3" secondAttribute="bottom" id="q0x-0K-2VY"/>
+                <constraint firstAttribute="trailing" secondItem="Rkn-FN-CC3" secondAttribute="trailing" id="rle-1q-mVl"/>
+                <constraint firstItem="Rkn-FN-CC3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zs2-Ob-pW9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="79" height="91"/>
+            <connections>
+                <outlet property="cabImage" destination="j0x-XF-WFl" id="Cei-DP-fsg"/>
+                <outlet property="lblCabInfo" destination="QIB-cq-rQR" id="cxi-3g-Ty5"/>
+            </connections>
+            <point key="canvasLocation" x="-345.6521739130435" y="60.602678571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CarImage" width="62" height="120"/>
+    </resources>
+</document>

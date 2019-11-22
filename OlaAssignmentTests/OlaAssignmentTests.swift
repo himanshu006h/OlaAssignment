@@ -10,25 +10,42 @@ import XCTest
 @testable import OlaAssignment
 
 class OlaAssignmentTests: XCTestCase {
+    
+    struct Constants {
+        static let StatusCodeDict = "Status code : 200"
+        static let completionHandlerMsg = "Call completes immediately by invoking completion handler"
+        static let testURL = "http://www.mocky.io/v2/5dc3f2c13000003c003477a0"
+    }
+    
+    var sessionUnderTest : URLSession!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sessionUnderTest = URLSession(configuration : URLSessionConfiguration.default)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sessionUnderTest = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testValidCallToInfoAPIGetsStatusCode200(){
+        let request = Constants.testURL.urlRequest()
+        let promise = expectation(description: Constants.StatusCodeDict)
+        
+        // when
+        sessionUnderTest.dataTask(with: request) { (data, response, error) in
+            // then
+            if let error = error{
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+            } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                if statusCode == 200 {
+                    promise.fulfill()
+                } else{
+                    XCTFail("Status code = \(statusCode)")
+                }
+            }
+            }.resume()
+        waitForExpectations(timeout: 10, handler: nil)
     }
 
 }
